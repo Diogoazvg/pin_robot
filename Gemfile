@@ -29,6 +29,9 @@ group :development, :test do
   gem 'byebug'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 
+  # factory_bot_rails provides integration between factory_bot and rails 5.0 or newer
+  gem 'factory_bot_rails', '~> 6.2'
+
   # rspec-rails is a testing framework for Rails 5+.
   gem 'rspec-rails', '~> 6.0', '>= 6.0.1'
 end

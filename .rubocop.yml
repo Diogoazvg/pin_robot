@@ -1,37 +1,38 @@
 Metrics/CyclomaticComplexity:
-  Description: >-
-    A complexity metric that is strongly correlated to the number
-    of test cases needed to validate a method.
   Enabled: true
   VersionAdded: "0.25"
   VersionChanged: "0.81"
   AllowedMethods: []
   AllowedPatterns: []
-  Max: 8
+  Max: 10
+
+Metrics/PerceivedComplexity:
+  Enabled: true
+  VersionAdded: "0.25"
+  VersionChanged: "0.81"
+  AllowedMethods: []
+  AllowedPatterns: []
+  Max: 10
 
 Style/Documentation:
-  Description: "Document classes and non-namespace modules."
+  Enabled: false
+
+Naming/MethodParameterName:
   Enabled: false
 
 Metrics/AbcSize:
-  Description: >-
-    A calculated magnitude based on number of assignments,
-    branches, and conditions.
   Reference:
     - http://c2.com/cgi/wiki?AbcMetric
     - https://en.wikipedia.org/wiki/ABC_Software_Metric
   Enabled: true
   VersionAdded: "0.27"
   VersionChanged: "1.5"
-  # The ABC size is a calculated magnitude, so this number can be an Integer or
-  # a Float.
   AllowedMethods: []
   AllowedPatterns: []
   CountRepeatedAttributes: true
   Max: 30
 
 Metrics/MethodLength:
-  Description: "Avoid methods longer than 10 lines of code."
   StyleGuide: "#short-methods"
   Enabled: true
   VersionAdded: "0.25"
@@ -43,7 +44,6 @@ Metrics/MethodLength:
   AllowedPatterns: []
 
 Metrics/BlockLength:
-  Description: "Avoid long blocks with many lines."
   Enabled: true
   VersionAdded: "0.44"
   VersionChanged: "1.5"
@@ -51,8 +51,6 @@ Metrics/BlockLength:
   Max: 200
   CountAsOne: []
   AllowedMethods:
-    # By default, exclude the `#refine` method, as it tends to have larger
-    # associated blocks.
     - refine
   AllowedPatterns: []
   Exclude:

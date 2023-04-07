@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 describe Robot::OrientationRightInteractor, type: :interactor do
-  subject { described_class.call(facing: facing) }
+  subject { described_class.call(facing:) }
 
   describe '.call' do
     shared_examples 'rotate facing to corretly direction' do |direction|

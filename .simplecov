@@ -9,8 +9,6 @@ SimpleCov.profiles.define 'root' do
 end
 
 SimpleCov.start do
-  # coverage_dir "#{Dir.pwd.partition('/components')[0]}/#{ENV['COVERAGE_REPORTS'] || 'coverage'}"
-  # byebug
   add_filter 'config'
   add_filter 'spec'
   add_filter 'task'

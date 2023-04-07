@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 describe Robot::RemoveInvalidValuesInteractor, type: :interactor do
-  subject { described_class.call(commands: commands) }
+  subject { described_class.call(commands:) }
 
   let(:value_place1) { [rand(5..10), rand(5..10), :north] }
   let(:value_place2) { [rand(0..4), rand(0..4), :south] }

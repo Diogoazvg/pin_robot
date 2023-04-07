@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 describe Robot::ChangePositionInteractor, type: :interactor do
-  subject { described_class.call(facing: facing, place: place) }
+  subject { described_class.call(facing:, place:) }
 
   let(:place) { { x: x_value, y: y_value, f: :facing } }
   let(:x_value) { 0 }
